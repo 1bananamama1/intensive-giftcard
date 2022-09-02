@@ -1,25 +1,9 @@
-const Text = () => {
-  return (
-    <p>
-      Поздравляю с днем рожденья!
-      <br />
-      Пусть будет жизнь полна веселья,
-      <br />
-      Не будет грусти и хлопот,
-      <br />
-      А только счастье круглый год!
-      <br />
-      <br />
-      Желаю творческих успехов,
-      <br />
-      Прекрасных дней, улыбок, смеха.
-      <br />
-      Любви, душевного тепла,
-      <br />
-      Как сказка, чтобы жизнь была!
-      <br />
-    </p>
-  );
+import { useContext } from "react";
+import { textContext } from "../../../context/text-context";
+
+const Text = ({ style }) => {
+  const { text } = useContext(textContext);
+  return <p className={style}>{text}</p>;
 };
 
 export default Text;

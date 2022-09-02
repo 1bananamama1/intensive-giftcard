@@ -1,3 +1,7 @@
+.wrapper {
+    position: relative;
+}
+
 .button {
     width: 300px;
     height: 65px;
@@ -7,4 +11,27 @@
     font-size: 18px;
     background-color: #00c78b;
     color: white;
+}
+
+.list {
+    position: absolute;
+    width: 300px;
+    padding: 20px 52px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #00c78b;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    top: 96px;
+}
+
+.item {
+    cursor: pointer;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
 }
