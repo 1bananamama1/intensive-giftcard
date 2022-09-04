@@ -4,7 +4,7 @@ import Header from "../header/header";
 import Card from "../card/card";
 import { TextContext } from "../../context/text-context";
 import { ImgContext } from "../../context/img-context";
-import { HolidayContext } from "../../context/holiday-context";
+import { HolidayContextProvider } from "../../context/holiday-context";
 
 const wrapper = {
   display: "flex",
@@ -15,15 +15,15 @@ const wrapper = {
 const App = () => {
   return (
     <div style={wrapper}>
-      <TextContext>
-        <ImgContext>
-          <HolidayContext>
+      <HolidayContextProvider>
+        <TextContext>
+          <ImgContext>
             <Header />
             <Card />
             <Footer />
-          </HolidayContext>
-        </ImgContext>
-      </TextContext>
+          </ImgContext>
+        </TextContext>
+      </HolidayContextProvider>
     </div>
   );
 };
