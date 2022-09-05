@@ -1,9 +1,17 @@
-import { useContext } from "react";
-import { textContext } from "../../../context/text-context";
+import { useSelector } from "react-redux";
 
 const Text = ({ style }) => {
-  const { text } = useContext(textContext);
-  return <p className={style}>{text}</p>;
+  const { text, loading } = useSelector((state) => state.text);
+
+  return (
+    <p className={style}>
+      {loading === "loading"
+        ? "загрузка "
+        : text === ""
+        ? "Выберите повод для поздравления "
+        : text}
+    </p>
+  );
 };
 
 export default Text;
