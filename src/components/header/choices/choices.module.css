@@ -26,6 +26,10 @@
     top: 96px;
 }
 
+.linkActive {
+    color: #4b0a3d;
+}
+
 .item {
     cursor: pointer;
     line-height: 32px;
